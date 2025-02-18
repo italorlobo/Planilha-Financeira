@@ -1,10 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planilha Inteligente</title>
+    <!-- Inclusão do Font Awesome para os ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8jhAXgD6Z2b3dDbJTXhWzIYs07V+a4owqFzLKlx9qK83fC" crossorigin="anonymous">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,7 +29,8 @@
         h2 {
             color: #218838;
         }
-        .button {
+        /* Botão de CTA aprimorado */
+        .cta-button {
             display: inline-block;
             background-color: #ff6600;
             color: #fff;
@@ -39,7 +41,7 @@
             margin-top: 20px;
             transition: background 0.3s ease-in-out;
         }
-        .button:hover {
+        .cta-button:hover {
             background-color: #cc5200;
         }
         .testimonials {
@@ -55,6 +57,7 @@
             border-radius: 5px;
             margin-top: 15px;
         }
+        /* Lista de benefícios com ícones */
         ul {
             list-style: none;
             padding: 0;
@@ -62,16 +65,55 @@
         ul li {
             font-size: 18px;
             margin: 10px 0;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        ul li i {
+            margin-right: 8px;
+            color: #4caf50;
         }
         p {
             font-size: 18px;
+        }
+        /* Estilização do Countdown Timer */
+        #countdown {
+            font-size: 20px;
+            color: #ff5722;
+            margin-bottom: 20px;
+        }
+        /* Estilização da seção de FAQ */
+        #faq {
+            margin-top: 30px;
+            text-align: left;
+        }
+        #faq h2 {
+            text-align: center;
+        }
+        #faq details {
+            margin: 10px 0;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #faq summary {
+            cursor: pointer;
+            font-weight: bold;
+        }
+        /* Estilização opcional para o vídeo de demonstração */
+        .video-container {
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Contador Regressivo -->
+        <div id="countdown"></div>
+        
         <h1>Pare de Perder Tempo com Controle Manual</h1>
-        <p>A melhor planilha para <strong>Controle de Receitas,Despesas e Investimentos tudo em poucos cliques. </strong> – Simples, Eficiente e Automatizada!</p>
+        <p>A melhor planilha para <strong>Controle de Receitas, Despesas e Investimentos tudo em poucos cliques.</strong> – Simples, Eficiente e Automatizada!</p>
         
         <div class="image-container">
             <img src="https://github.com/italorlobo/imagens-site/blob/main/PlanilhaFinanceira.PNG?raw=true" alt="Demonstração da Planilha">
@@ -79,13 +121,13 @@
         
         <h2>O Que Você Vai Ganhar?</h2>
         <ul>
-            <li>✅ Organização completa em poucos cliques</li>
-            <li>✅ Design intuitivo e fácil de usar</li>
-            <li>✅ Automação total – sem necessidade de cálculos manuais</li>
-            <li>✅ Compatível com Excel e Google Sheets</li>
+            <li><i class="fas fa-check"></i>Organização completa em poucos cliques</li>
+            <li><i class="fas fa-check"></i>Design intuitivo e fácil de usar</li>
+            <li><i class="fas fa-check"></i>Automação total – sem necessidade de cálculos manuais</li>
+            <li><i class="fas fa-check"></i>Compatível com Excel e Google Sheets</li>
         </ul>
         
-        <h2>O Que Nossos Clientes Dizem: </h2>
+        <h2>O Que Nossos Clientes Dizem:</h2>
         <div class="testimonials">
             <p>"Essa planilha facilitou minha rotina de maneira inacreditável!" – Ana Souza</p>
             <p>"Nunca mais precisei me preocupar com erros de cálculo. Tudo é automático!" – Carlos Mendes</p>
@@ -96,9 +138,51 @@
         <p><strong>De R$89,90!</strong></p>
         <p><strong>Apenas hoje por R$29,90!</strong></p>
         
-        <a class="button" href="https://pay.kiwify.com.br/pBlHhRl" target="_blank">Quero Minha Planilha Agora!</a>
+        <a class="cta-button" href="https://pay.kiwify.com.br/pBlHhRl" target="_blank">Quero Minha Planilha Agora!</a>
         
         <p>💯 Garantia de satisfação: 7 dias para reembolso!</p>
+        
+        <!-- Seção de FAQ -->
+        <section id="faq">
+            <h2>Perguntas Frequentes</h2>
+            <details>
+                <summary>Como funciona a garantia de reembolso?</summary>
+                <p>Você tem 7 dias para solicitar o reembolso se não estiver satisfeito com a planilha.</p>
+            </details>
+            <details>
+                <summary>É compatível com todas as versões do Excel?</summary>
+                <p>Sim, nossa planilha é compatível com as versões mais recentes do Excel e também com o Google Sheets.</p>
+            </details>
+        </section>
+        
+        <!-- Seção de Vídeo de Demonstração (opcional) -->
+        <div class="video-container">
+            <h2>Demonstração da Planilha</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SEU_VIDEO_ID" title="Demonstração da Planilha" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
+    
+    <!-- Script do Contador Regressivo -->
+    <script>
+      // Define o horário final da oferta (exemplo: hoje às 23:59:59)
+      var countDownDate = new Date();
+      countDownDate.setHours(23, 59, 59, 999);
+
+      var countdownFunction = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML = "Oferta termina em " + hours + "h " + minutes + "m " + seconds + "s";
+
+        if (distance < 0) {
+          clearInterval(countdownFunction);
+          document.getElementById("countdown").innerHTML = "Oferta encerrada";
+        }
+      }, 1000);
+    </script>
 </body>
 </html>

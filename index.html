@@ -1,291 +1,200 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Planilha Inteligente - Controle Automático</title>
-  <meta name="description" content="Planilha Inteligente para controle de receitas, despesas e investimentos. Simples, eficiente e automatizada. Aproveite nossa oferta especial!">
-  <meta name="keywords" content="planilha, controle financeiro, receitas, despesas, investimentos, automatização, Excel, Google Sheets">
-  <!-- Font Awesome para ícones -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8jhAXgD6Z2b3dDbJTXhWzIYs07V+a4owqFzLKlx9qK83fC" crossorigin="anonymous">
-  
-  <style>
-    /* Animação fade-in */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .fade-in {
-      animation: fadeIn 1s ease-in-out;
-    }
-    
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      background-color: #f4f7f6; /* Fundo suave */
-      color: #333;
-    }
-    .container {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      color: #2b8a3e; /* Verde que incentiva compras */
-    }
-    h2 {
-      color: #218838;
-      margin-top: 30px;
-    }
-    p {
-      font-size: 18px;
-    }
-    /* Botão de CTA aprimorado */
-    .cta-button {
-      display: inline-block;
-      background-color: #ff6600;
-      color: #fff;
-      padding: 15px 20px;
-      font-size: 18px;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 20px;
-      transition: background 0.3s ease-in-out;
-    }
-    .cta-button:hover {
-      background-color: #cc5200;
-    }
-    .testimonials {
-      margin-top: 20px;
-      font-style: italic;
-      background-color: #f9f9f9;
-      padding: 15px;
-      border-radius: 5px;
-    }
-    .image-container img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 5px;
-      margin-top: 15px;
-    }
-    /* Lista de benefícios com ícones */
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      font-size: 18px;
-      margin: 10px 0;
-      text-align: left;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    ul li i {
-      margin-right: 8px;
-      color: #4caf50;
-    }
-    /* Contador Regressivo */
-    #countdown {
-      font-size: 20px;
-      color: #ff5722;
-      margin-bottom: 20px;
-    }
-    /* Seção FAQ */
-    #faq {
-      margin-top: 30px;
-      text-align: left;
-    }
-    #faq h2 {
-      text-align: center;
-    }
-    #faq details {
-      margin: 10px 0;
-      background-color: #f1f1f1;
-      padding: 10px;
-      border-radius: 5px;
-    }
-    #faq summary {
-      cursor: pointer;
-      font-weight: bold;
-    }
-    /* Seção de Lead Capture */
-    #lead-capture {
-      margin-top: 40px;
-      padding: 20px;
-      background-color: #e9f5ff;
-      border-radius: 5px;
-    }
-    #lead-capture input[type="email"] {
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      width: 70%;
-      max-width: 300px;
-    }
-    #lead-capture button {
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-      background-color: #ff6600;
-      color: #fff;
-      margin-left: 10px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    #lead-capture button:hover {
-      background-color: #cc5200;
-    }
-    /* Seção de Trust Badges */
-    .trust-badges {
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-    }
-    .trust-badges img {
-      max-width: 80px;
-      height: auto;
-    }
-    /* Seção de Contato */
-    #contact {
-      margin-top: 40px;
-      padding: 20px;
-      background-color: #f0f0f0;
-      border-radius: 5px;
-    }
-    #contact p {
-      margin: 5px 0;
-    }
-  </style>
-  
-  <!-- Placeholder para Pixels de Rastreamento -->
-  <!-- Insira aqui os códigos do Pixel do Facebook e Google Analytics -->
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilha Financeira Automatizada</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos básicos para a página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #50b3a2;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #2980b9 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        #showcase {
+            min-height: 400px;
+            background: url('banner.jpg') no-repeat 0 -400px;
+            text-align: center;
+            color: #fff;
+        }
+        #showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        #showcase p {
+            font-size: 20px;
+        }
+        .button {
+            display: inline-block;
+            color: #fff;
+            background: #e8491d;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background: #cf4317;
+        }
+        #newsletter {
+            padding: 15px;
+            color: #fff;
+            background: #50b3a2;
+        }
+        #newsletter h1 {
+            float: left;
+        }
+        #newsletter form {
+            float: right;
+            margin-top: 15px;
+        }
+        #newsletter input[type="email"] {
+            padding: 4px;
+            height: 25px;
+            width: 250px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content h2 {
+            text-align: center;
+        }
+        .content p {
+            text-align: center;
+            font-size: 18px;
+        }
+        .testimonial {
+            background: #e2e2e2;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+        .testimonial .author {
+            text-align: right;
+            font-weight: bold;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-  <div class="container fade-in">
-    <!-- Contador Regressivo -->
-    <div id="countdown"></div>
-    
-    <h1>Pare de Perder Tempo com Controle Manual</h1>
-    <p>A melhor planilha para <strong>Controle de Receitas, Despesas e Investimentos</strong> tudo em poucos cliques – Simples, Eficiente e Automatizada!</p>
-    
-    <div class="image-container">
-      <img src="https://github.com/italorlobo/imagens-site/blob/main/PlanilhaFinanceira.PNG?raw=true" alt="Demonstração da Planilha">
-    </div>
-    
-    <!-- Trust Badges -->
-    <div class="trust-badges">
-      <!-- Utilize URLs reais das imagens ou ícones -->
-      <img src="https://via.placeholder.com/80x80?text=Seguro" alt="Pagamento Seguro">
-      <img src="https://via.placeholder.com/80x80?text=Garantia" alt="Garantia 7 Dias">
-    </div>
-    
-    <h2>O Que Você Vai Ganhar?</h2>
-    <ul>
-      <li><i class="fas fa-check"></i>Organização completa em poucos cliques</li>
-      <li><i class="fas fa-check"></i>Design intuitivo e fácil de usar</li>
-      <li><i class="fas fa-check"></i>Automação total – sem necessidade de cálculos manuais</li>
-      <li><i class="fas fa-check"></i>Compatível com Excel e Google Sheets</li>
-    </ul>
-    
-    <h2>O Que Nossos Clientes Dizem:</h2>
-    <div class="testimonials">
-      <p>"Essa planilha facilitou minha rotina de maneira inacreditável!" – Ana Souza</p>
-      <p>"Nunca mais precisei me preocupar com erros de cálculo. Tudo é automático!" – Carlos Mendes</p>
-      <p>"Recomendo a todos! Uma solução prática e essencial." – Mariana Lima</p>
-    </div>
-    
-    <h2>🔥Oferta Especial!🔥</h2>
-    <p><strong>De R$89,90!</strong></p>
-    <p><strong>Apenas hoje por R$29,90!</strong></p>
-    
-    <a class="cta-button" href="https://pay.kiwify.com.br/pBlHhRl" target="_blank">Quero Minha Planilha Agora!</a>
-    
-    <p>💯 Garantia de satisfação: 7 dias para reembolso!</p>
-    
-    <!-- Seção de FAQ -->
-    <section id="faq" class="fade-in">
-      <h2>Perguntas Frequentes</h2>
-      <details>
-        <summary>Como funciona a garantia de reembolso?</summary>
-        <p>Você tem 7 dias para solicitar o reembolso se não estiver satisfeito com a planilha.</p>
-      </details>
-      <details>
-        <summary>É compatível com todas as versões do Excel?</summary>
-        <p>Sim, nossa planilha é compatível com as versões mais recentes do Excel e também com o Google Sheets.</p>
-      </details>
-      <details>
-        <summary>Como acessar o tutorial incluso?</summary>
-        <p>Após a compra, você receberá um link exclusivo para acessar o tutorial completo de utilização.</p>
-      </details>
-      <details>
-        <summary>Quais os benefícios em usar esta planilha?</summary>
-        <p>Elimina erros de cálculo, economiza tempo e permite um controle financeiro automatizado.</p>
-      </details>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Planilha Financeira Automatizada</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#benefits">Benefícios</a></li>
+                    <li><a href="#testimonials">Depoimentos</a></li>
+                    <li><a href="#offer">Oferta</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Controle Suas Finanças de Forma Simples e Eficiente</h1>
+            <p>Elimine erros manuais e economize horas semanais com nossa planilha automatizada, garantindo tranquilidade financeira.</p>
+            <a href="https://pay.kiwify.com.br" class="button">Quero Minha Planilha Agora!</a>
+        </div>
     </section>
-    
-    <!-- Repetição do CTA (para reforçar a ação) -->
-    <a class="cta-button fade-in" href="https://pay.kiwify.com.br/pBlHhRl" target="_blank" style="margin-top: 30px;">Quero Minha Planilha Agora!</a>
-    
-    <!-- Seção de Vídeo de Demonstração (opcional) -->
-    <div class="video-container fade-in">
-      <h2>Demonstração da Planilha</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/SEU_VIDEO_ID" title="Demonstração da Planilha" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    
-    <!-- Seção de Captação de Leads -->
-    <section id="lead-capture" class="fade-in">
-      <h2>Receba Novidades e Ofertas Exclusivas</h2>
-      <form action="YOUR_FORM_HANDLER_URL" method="post">
-        <input type="email" name="email" placeholder="Seu e-mail" required>
-        <button type="submit">Inscreva-se Agora</button>
-      </form>
+
+    <section id="newsletter">
+        <div class="container">
+            <h1>Receba Novidades e Ofertas Exclusivas</h1>
+            <form action="https://mailchimp.com" method="post">
+                <input type="email" name="email" placeholder="Digite seu melhor e-mail" required>
+                <button type="submit" class="button">Inscrever-se</button>
+            </form>
+        </div>
     </section>
-    
-    <!-- Seção de Contato / Suporte -->
-    <section id="contact" class="fade-in">
-      <h2>Fale Conosco</h2>
-      <p>Tem dúvidas ou precisa de ajuda? Entre em contato:</p>
-      <p>Email: suporte@seusite.com.br</p>
-      <p>WhatsApp: (83) 9 1234-5678</p>
-    </section>
-    
-  </div>
-  
-  <!-- Script do Contador Regressivo -->
-  <script>
-    // Define o horário final da oferta (exemplo: hoje às 23:59:59)
-    var countDownDate = new Date();
-    countDownDate.setHours(23, 59, 59, 999);
 
-    var countdownFunction = setInterval(function() {
-      var now = new Date().getTime();
-      var distance = countDownDate - now;
+    <div class="container content">
+        <section id="benefits">
+            <h2>O Que Você Vai Ganhar?</h2>
+            <p>Organização completa em poucos cliques</p>
+            <p>Design intuitivo e fácil de usar</p>
+            <p>Automação total – sem necessidade de cálculos manuais</p>
+            <p>Compatível com Excel e Google Sheets</p>
+        </section>
 
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        <section id="testimonials">
+            <h2>O Que Nossos Clientes Dizem:</h2>
+            <div class="testimonial">
+                <p>"Antes, eu gastava horas tentando organizar minhas finanças. Com esta planilha, reduzi esse tempo para minutos e ainda tenho uma visão clara dos meus investimentos."</p>
+                <p class="author">– João Pereira</p>
+            </div>
+            <div class="testimonial">
+                <p>"Nunca mais precisei me preocupar com erros de cálculo. Tudo é automático!"</p>
+                <p class="author">– Carlos Mendes</p>
+            </div>
+            <div class="testimonial">
+                <p>"Recomendo a todos! Uma solução prática e essencial."</p>
+                <p class="author">– Mariana Lima</p>
+            </div>
+        </section>
 
-      document.getElementById("countdown").innerHTML = "Oferta termina em " + hours + "h " + minutes + "m " + seconds + "s";
+        <section id="offer">
+            <h2>Oferta Especial!</h2>
+            <p>De <del>R$89,90</del> por apenas <strong>R$29,90</strong>!</p>
+            <p>Oferta válida até sexta-feira!</p>
+            <a href="https://pay.kiwify.com.br" class="button">Quero Minha Planilha Agora!</a>
+            <p>Garantia de satisfação: 30 dias para reembolso!</p>
+        </section>
 
-      if (distance < 0) {
-        clearInterval(countdownFunction);
-        document.getElementById("countdown").innerHTML = "Oferta encerrada";
-      }
-    }, 1000);
-  </script>
-  
-  <!-- Placeholder para códigos de pixels (Facebook, Google Analytics, etc.) -->
-  <!-- Insira aqui os seus scripts de rastreamento -->
-  
-</body>
-</html>
+        <
+::contentReference[oaicite:0]{index=0}
+ 

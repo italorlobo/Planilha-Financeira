@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planilha Financeira Automatizada</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
     <style>
         /* Estilos básicos para a página */
         body {
@@ -53,12 +52,14 @@
         }
         #showcase {
             min-height: 400px;
-            background: url('banner.jpg') no-repeat 0 -400px;
+            background: url('banner.jpg') no-repeat center center/cover;
             text-align: center;
             color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         #showcase h1 {
-            margin-top: 100px;
             font-size: 55px;
             margin-bottom: 10px;
         }
@@ -73,6 +74,7 @@
             text-decoration: none;
             font-size: 18px;
             border-radius: 5px;
+            margin-top: 20px;
         }
         .button:hover {
             background: #cf4317;
@@ -81,18 +83,35 @@
             padding: 15px;
             color: #fff;
             background: #50b3a2;
+            text-align: center;
         }
         #newsletter h1 {
-            float: left;
+            margin: 0;
+            padding-bottom: 10px;
         }
         #newsletter form {
-            float: right;
-            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         #newsletter input[type="email"] {
-            padding: 4px;
-            height: 25px;
+            padding: 10px;
+            height: 40px;
             width: 250px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+        }
+        #newsletter button {
+            padding: 10px 20px;
+            height: 40px;
+            border: none;
+            background: #e8491d;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        #newsletter button:hover {
+            background: #cf4317;
         }
         .content {
             padding: 20px;
@@ -116,6 +135,38 @@
         .testimonial .author {
             text-align: right;
             font-weight: bold;
+        }
+        #offer {
+            background: #fff3cd;
+            padding: 20px;
+            border: 1px solid #ffeeba;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #offer h2 {
+            color: #856404;
+        }
+        #offer p {
+            font-size: 20px;
+        }
+        .cta-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #FFFFFF;
+            background-color: #FFA500; /* Cor laranja */
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #FF8C00; /* Tom mais escuro de laranja ao passar o mouse */
         }
         footer {
             background: #333;
@@ -148,7 +199,9 @@
         <div class="container">
             <h1>Controle Suas Finanças de Forma Simples e Eficiente</h1>
             <p>Elimine erros manuais e economize horas semanais com nossa planilha automatizada, garantindo tranquilidade financeira.</p>
-            <a href="https://pay.kiwify.com.br" class="button">Quero Minha Planilha Agora!</a>
+            <div class="cta-container">
+                <a href="https://pay.kiwify.com.br" class="cta-button">Quero Minha Planilha Agora!</a>
+            </div>
         </div>
     </section>
 
@@ -157,44 +210,12 @@
             <h1>Receba Novidades e Ofertas Exclusivas</h1>
             <form action="https://mailchimp.com" method="post">
                 <input type="email" name="email" placeholder="Digite seu melhor e-mail" required>
-                <button type="submit" class="button">Inscrever-se</button>
+                <button type="submit">Inscrever-se</button>
             </form>
         </div>
     </section>
 
     <div class="container content">
-        <section id="benefits">
-            <h2>O Que Você Vai Ganhar?</h2>
-            <p>Organização completa em poucos cliques</p>
-            <p>Design intuitivo e fácil de usar</p>
-            <p>Automação total – sem necessidade de cálculos manuais</p>
-            <p>Compatível com Excel e Google Sheets</p>
-        </section>
-
-        <section id="testimonials">
-            <h2>O Que Nossos Clientes Dizem:</h2>
-            <div class="testimonial">
-                <p>"Antes, eu gastava horas tentando organizar minhas finanças. Com esta planilha, reduzi esse tempo para minutos e ainda tenho uma visão clara dos meus investimentos."</p>
-                <p class="author">– João Pereira</p>
-            </div>
-            <div class="testimonial">
-                <p>"Nunca mais precisei me preocupar com erros de cálculo. Tudo é automático!"</p>
-                <p class="author">– Carlos Mendes</p>
-            </div>
-            <div class="testimonial">
-                <p>"Recomendo a todos! Uma solução prática e essencial."</p>
-                <p class="author">– Mariana Lima</p>
-            </div>
-        </section>
-
-        <section id="offer">
-            <h2>Oferta Especial!</h2>
-            <p>De <del>R$89,90</del> por apenas <strong>R$29,90</strong>!</p>
-            <p>Oferta válida até sexta-feira!</p>
-            <a href="https://pay.kiwify.com.br" class="button">Quero Minha Planilha Agora!</a>
-            <p>Garantia de satisfação: 30 dias para reembolso!</p>
-        </section>
-
-        <
+       
 ::contentReference[oaicite:0]{index=0}
  
